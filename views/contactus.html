@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  
+  <style>
+    /* Center the form on the page */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    /* Style the form inputs */
+    input {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 250px;
+      max-width: 100%;
+    }
+    
+    /* Style the form submit button */
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/product.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item"><a href="/">Shop</a></li>
+                <li class="main-header__item"><a class="active" href="/admin/add-product">Add Product</a></li>
+                <li class="main-header__item"><a href="/contactus">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+  <form action="/success" method="post">
+    <h1>Contact Us</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
