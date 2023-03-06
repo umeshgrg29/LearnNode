@@ -1,14 +1,19 @@
-const express = require('express')
-const app = express();
-const bodyParser = require('body-parser')
 const path = require('path')
-const rootDir = require('./helperUtil/path');
+
+const express = require('express')
+const bodyParser = require('body-parser')
+
+
+const errorController = require('./controllers/error')
+
+const app = express();
+
+app.set('view engine', 'ejs'); // added
+app.set('views', 'views'); // Added
 
 const adminRoute = require("./routes/admin");
 const shopRoute = require("./routes/shop");
 const contactusRoute = require('./routes/contactus')
-
-const errorController = require('./controllers/error')
 
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname, 'public')))

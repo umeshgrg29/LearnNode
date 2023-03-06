@@ -1,6 +1,6 @@
 const path = require('path')
 
-const rootDir = require('../helperUtil/path');
+const rootDir = require('../util/path');
 
 exports.getcontactuscontroller = (req,res,next) =>{
     res.sendFile(path.join(rootDir, 'views', 'contactus.html'))
